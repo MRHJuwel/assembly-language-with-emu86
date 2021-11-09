@@ -11,7 +11,7 @@ MAIN PROC           ; procedure
     MOV DS, AX
             
     MOV AH, 01h	    ; input key function
-    Int 21h		    ; ASCII code in AL    
+    Int 21h	    ; ASCII code in AL    
     MOV BL, AL      ; Moving input to BL 
          
          
@@ -24,15 +24,15 @@ MAIN PROC           ; procedure
      
     
    
-	MOV AH, 02h 	; display character function
+    MOV AH, 02h 	; display character function
     MOV DL, BL		; Moving BL to DL
     INT 21h 		; display character 
 
 
 	
 	      
-	MOV AH, 4ch     ; to exit DOS
-	INT 21h
+    MOV AH, 4ch     ; to exit DOS
+    INT 21h
 	
     MAIN ENDP
 END MAIN
